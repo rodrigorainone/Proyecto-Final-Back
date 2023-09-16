@@ -1,0 +1,126 @@
+<div>
+    <h1>Hola {{user.name}}</h1>
+    <div class="RoleDiv">
+        
+        <h2 class={{user.role}}>Role:{{user.role}}</h2>
+    </div>
+    <div class="EmailDiv">        
+        <h2 class={{user.email}}>Email:{{user.email}}</h2>
+    </div>
+    <h2>email:</h2>   
+    <a href="/api/sessions/logout"><button>Salir</button></a>
+    <div class="formConteiner">    
+        <h1>Ingresar Nuevos Productos</h1>
+        <form id="formulario" action="">
+            <div>
+                <label for="title">Titulo :</label>
+                <input type="text" name="title" id="">
+            </div>
+        
+            <div>
+                    <label for="description">Descripcion :</label>
+                <input type="text" name="description" id="">
+            </div>
+        
+            <div>
+                <label for="price">Precio :</label>
+                <input type="text" name="price" id="">
+            </div>
+
+            <div>
+                <label for="thumbnail">Thumbnail :</label>
+                <input type="text" name="thumbnail" id="">
+            </div>
+
+            <div>
+                <label for="code">Code :</label>
+                <input type="text" name="code" id="">
+            </div>
+
+            <div>
+                <label for="stock">Stock :</label>
+                <input type="text" name="stock" id="">
+            </div>
+
+            <div>
+                <label for="category">Category :</label>
+                <input type="text" name="category" id="">
+            </div>
+      
+            <div>
+                <label for="status">Status :</label>
+                <input type="text" name="status" id="">
+            </div>       
+
+            <input class="botonForm" type="submit">
+        </form>
+        <span class="errorForm">Alguno de los campos no fue ingresado !</span>
+    </div>
+    <div class="formConteinerActualizacion">    
+        <h1>Actualizar Producto</h1>
+        <form id="formularioActualizacion" action="">
+            <div>
+                <label for="id">Id :</label>
+                <input type="text" name="id" id="">
+            </div>
+            <div>
+                <label for="title">Titulo :</label>
+                <input type="text" name="title" id="">
+            </div>
+        
+            <div>
+                    <label for="description">Descripcion :</label>
+                <input type="text" name="description" id="">
+            </div>
+        
+            <div>
+                <label for="price">Precio :</label>
+                <input type="text" name="price" id="">
+            </div>
+
+            <div>
+                <label for="thumbnail">Thumbnail :</label>
+                <input type="text" name="thumbnail" id="">
+            </div>
+
+            <div>
+                <label for="code">Code :</label>
+                <input type="text" name="code" id="">
+            </div>
+
+            <div>
+                <label for="stock">Stock :</label>
+                <input type="text" name="stock" id="">
+            </div>
+
+            <div>
+                <label for="category">Category :</label>
+                <input type="text" name="category" id="">
+            </div>
+      
+            <div>
+                <label for="status">Status :</label>
+                <input type="text" name="status" id="">
+            </div>       
+
+            <input class="botonForm" type="submit">
+        </form>
+        <span class="errorFormAct">Alguno de los campos no fue ingresado !</span>
+    </div>
+
+    <div class="formConteinerEliminar">    
+        <h1> Eliminar Producto</h1>
+        <form id="formularioEliminar" action="">
+            <div>
+                <label for="id">Id :</label>
+                <input type="text" name="id" id="">
+            </div>                   
+
+            <input class="botonForm" type="submit">
+        </form>
+        <span class="errorFormEli">Alguno de los campos no fue ingresado !</span>
+    </div>    
+    
+</div>
+
+<script src="/js/panelAdmin.js"></script>

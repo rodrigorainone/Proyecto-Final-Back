@@ -1,0 +1,90 @@
+<div id="verProductsHome">
+    {{#if user}}
+    <div >
+            <h1>Hola, {{user.name}}</h1>
+            <p class="email" email={{user.email}}>Correo: {{user.email}}</p>
+            <p class="userID" id={{user.id}}>iD: {{user.id}} </p>
+            <p>Rol : {{user.role}}</p>
+            <p id={{user.cart}} class="idCarrito">Carrito: {{user.cart}}</p>
+            <a href="/api/sessions/logout"><button>Salir</button></a>
+            <a href="/carts/{{user.cart}}"><button>Ver Carrito</button></a>
+    </div>
+
+    <button class="changeRol">Presione aqui para cambiar el Role a Premium o a USER</button>
+
+
+    {{/if}}
+    <div id="mostrarProductos">   
+        {{#if product}}  
+            <h1>Productos</h1>
+        {{/if}} 
+        <div class="mostrarProductosCart">
+        {{#if product}}            
+            {{#each product}}
+                <div id="cart">                        
+                        <div>
+                            <img class="cartIMG" src={{this.thumbnail}} alt="img">
+                        </div>
+                        <p><span class="keyDer"> ID : </span>{{this._id}}</p>
+                        <p><span class="keyDer"> TITULO : </span> {{this.title}}</p>
+                        <p><span class="keyDer"> DESCRIPCION : </span> {{this.description}}</p>
+                        <p><span class="keyDer"> PRECIO: </span> ${{this.price}}</p>                        
+                        <p><span class="keyDer"> CODIGO : </span> {{this.code}}  </p>
+                        <p><span class="keyDer"> STOCK : </span> {{this.stock}}</p>
+                        <p><span class="keyDer"> CATEGORIA : </span> {{this.category}}</p>
+                        <p><span class="keyDer"> STATUS: </span> {{this.status}} </p>   
+                        <p><span class="keyDer"> OWNER: </span> {{this.owner}} </p>                        
+                        <button id={{this._id}}>Agregar al carrito</button>                                        
+                </div>
+            {{/each}} 
+        {{/if}}  
+        </div>       
+        <div class="contendorBotones">
+            {{#if hasPrevPage}}
+                <a href="/products/?page={{prevPage}}&&limit={{limit}}&&sort={{sort}}&&category={{category}}&&status={{status}}" class="botonPaginas"><button>Anterior</button></a>
+            {{/if}}     
+        
+                {{page}}        
+        
+            {{#if hasNextPage}}
+                <a href="/products/?page={{nextPage}}&&limit={{limit}}&&sort={{sort}}&&category={{category}}&&status={{status}}" class="botonPaginas"><button>Siguiente</button></a>
+            {{/if}}
+        </div>
+
+     </div>
+      <div class="mostrarCarrito">
+            {{#if carritoId}}
+                    <h1>Carrito</h1>
+                    <div class="verCarrito">
+                         <p><span id={{carritoId._id}} class="keyDer"> ID Carrito:</span>{{carritoId._id}}</p>                    
+                    </div>     
+                    <div class="productosCarritoContenedor">             
+                    {{#each carritoId.products}}
+                        {{#if product._id}} 
+                        <div id="cart">
+                            <p><span class="keyDer"> ID Producto: </span>{{this.product._id}}</p>
+                            <p><span class="keyDer"> Cantidad : </span> {{this.quantity}}</p>                           
+                            <p><span class="keyDer"> PRECIO: </span> ${{this.product.price}}</p>                    
+                            <p><span class="keyDer"> STOCK : </span> {{this.product.stock}}</p>  
+                            <div class="eliminarProducto">
+                                <button id={{this.product._id}}>Eliminar Producto</button> 
+                            </div>                                                    
+                        </div>   
+                       {{/if}}                   
+                    {{/each}}
+                    
+                    <div>
+                        <a href="/products"><button>Seguir Comprando</button></a>
+                    </div>
+                    <div class="vaciarCarrito">
+                         <button >Vaciar Carrito</button>
+                    </div>       
+                    <div class="finalizarCompra">
+                        <button >Finalizar Compra</button>                  
+                    </div>             
+                     <p>Total:${{total}} </p>
+                    </div>
+            {{/if}} 
+        </div>
+</div>
+<script src="/js/home.js"></script>

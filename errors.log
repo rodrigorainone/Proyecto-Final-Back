@@ -1,0 +1,101 @@
+
+{"level":"error","message":"This is a debug log message."}
+{"level":"fatal","message":"This is a debug log message."}
+{"level":"error","message":"This is a debug log message."}
+{"level":"fatal","message":"This is a debug log message."}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"_message":"products validation failed","errors":{"price":{"kind":"Number","message":"Cast to Number failed for value \"asda\" (type string) at path \"price\"","name":"CastError","path":"price","reason":{"actual":false,"code":"ERR_ASSERTION","expected":true,"generatedMessage":true,"operator":"=="},"stringValue":"\"asda\"","value":"asda","valueType":"string"},"status":{"kind":"Boolean","message":"Cast to Boolean failed for value \"1231\" (type string) at path \"status\" because of \"CastError\"","name":"CastError","path":"status","reason":{"kind":"boolean","message":"Cast to boolean failed for value \"1231\" (type string) at path \"undefined\"","name":"CastError","stringValue":"\"1231\"","value":"1231","valueType":"string"},"stringValue":"\"1231\"","value":"1231","valueType":"string"},"stock":{"kind":"Number","message":"Cast to Number failed for value \"asdasd\" (type string) at path \"stock\"","name":"CastError","path":"stock","reason":{"actual":false,"code":"ERR_ASSERTION","expected":true,"generatedMessage":true,"operator":"=="},"stringValue":"\"asdasd\"","value":"asdasd","valueType":"string"}},"level":"error","message":"products validation failed: price: Cast to Number failed for value \"asda\" (type string) at path \"price\", stock: Cast to Number failed for value \"asdasd\" (type string) at path \"stock\", status: Cast to Boolean failed for value \"1231\" (type string) at path \"status\" because of \"CastError\"","name":"ValidationError"}
+{"_message":"products validation failed","errors":{"price":{"kind":"Number","message":"Cast to Number failed for value \"asda\" (type string) at path \"price\"","name":"CastError","path":"price","reason":{"actual":false,"code":"ERR_ASSERTION","expected":true,"generatedMessage":true,"operator":"=="},"stringValue":"\"asda\"","value":"asda","valueType":"string"},"stock":{"kind":"Number","message":"Cast to Number failed for value \"asdasd\" (type string) at path \"stock\"","name":"CastError","path":"stock","reason":{"actual":false,"code":"ERR_ASSERTION","expected":true,"generatedMessage":true,"operator":"=="},"stringValue":"\"asdasd\"","value":"asdasd","valueType":"string"}},"level":"error","message":"products validation failed: price: Cast to Number failed for value \"asda\" (type string) at path \"price\", stock: Cast to Number failed for value \"asdasd\" (type string) at path \"stock\"","name":"ValidationError"}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"level":"error"}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"level":"error"}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"level":"error"}
+{"level":"error"}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}
+{"code":1,"level":"error","name":"Error de creación de producto","status":400}

@@ -12,6 +12,9 @@
   "author": "",
   "license": "ISC",
   "type": "module",
+  "engines":{
+    "node":">=14 <17"
+  },
   "dependencies": {
     "@faker-js/faker": "^8.0.2",
     "artillery": "^2.0.0-35",

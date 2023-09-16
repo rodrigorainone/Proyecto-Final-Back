@@ -132,59 +132,66 @@ valorInputFormActualizacion.addEventListener('submit',async (e)=>{
               'Content-Type': 'application/json',
             },
          });
-         const responseData = await response.json();
-         console.log(responseData); 
-         if ( getemail.getAttribute("class")==responseData.owner){
+         const responseData = await response.json();  
+         if(responseData.owner){
+
+            if ( getemail.getAttribute("class")==responseData.owner){
             
-            const title = e.target.title.value
-            const description  = e.target.description.value
-            const price = e.target.price.value
-            const thumbnail = e.target.thumbnail.value
-            const code = e.target.code.value
-            const stock = e.target.stock.value
-            const category = e.target.category.value
-            const status = e.target.status.value
-    
-            if (title && description && price && thumbnail && code && stock && category && status && id){
-            
-                const productForm ={             
-                    title,
-                    description,
-                    price, 
-                    thumbnail,
-                    code,
-                    stock,
-                    category,
-                    status
-                }          
-                console.log(productForm)
-                const response = await fetch(`/api/products/${id}`, {
-                    method: 'PUT',
-                body: JSON.stringify(productForm),
-                    headers: {
-                    'Content-Type': 'application/json',
-                    },
-                });
-                const responseData = await response.json();
-                console.log(responseData); 
-    
-                getErrorSpanAct.style.display = 'none'  
-                if (responseData.status==="success"){
-                    Swal.fire('Se modifico el producto')   
-                }
-                else  
-                    {
-                        Swal.fire('no existe el producto a modificar o tipio mal algun valor')   
+                const title = e.target.title.value
+                const description  = e.target.description.value
+                const price = e.target.price.value
+                const thumbnail = e.target.thumbnail.value
+                const code = e.target.code.value
+                const stock = e.target.stock.value
+                const category = e.target.category.value
+                const status = e.target.status.value
+        
+                if (title && description && price && thumbnail && code && stock && category && status && id){
+                
+                    const productForm ={             
+                        title,
+                        description,
+                        price, 
+                        thumbnail,
+                        code,
+                        stock,
+                        category,
+                        status
+                    }          
+                    console.log(productForm)
+                    const response = await fetch(`/api/products/${id}`, {
+                        method: 'PUT',
+                    body: JSON.stringify(productForm),
+                        headers: {
+                        'Content-Type': 'application/json',
+                        },
+                    });
+                    const responseData = await response.json();                
+        
+                    getErrorSpanAct.style.display = 'none'  
+                    if (responseData.status==="success"){
+                        Swal.fire('Se modifico el producto')   
                     }
-            }
-            else {
+                    else  
+                        {
+                            Swal.fire('no existe el producto a modificar o tipio mal algun valor')   
+                        }
+                }
+                else {
+                
+                    getErrorSpanAct.style.display = 'block'
+                } 
+             }
+             else{
+                Swal.fire('no se puede modificar ya que no fuiste quien creo el producto')   
+             }
+
             
-                getErrorSpanAct.style.display = 'block'
-            } 
-         }
-         else{
-            Swal.fire('no se puede modificar ya que no fuiste quien creo el producto')   
-         }
+            }  
+        else
+           {
+            Swal.fire('el producto a modificar no existia')   
+           }
          
     }
 })

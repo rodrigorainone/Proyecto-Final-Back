@@ -226,48 +226,55 @@ valorInputFormEliminar.addEventListener('submit', async (e)=>{
         getErrorSpanEli.style.display = 'block'
     }
     }
-    else{
-        const response = await fetch(`/api/products/${id}`, {
+    else{        
+        const response1 = await fetch(`/api/products/${id}`, {
             method: 'GET',           
             headers: {
               'Content-Type': 'application/json',
             },
          });
-         const responseData = await response.json();
-         console.log(responseData); 
-         if ( getemail.getAttribute("class")==responseData.owner){
-            if (id){
-        
-                const productForm ={ 
-                    id            
-                }          
-                console.log(productForm)
-                const response = await fetch(`/api/products/${id}`, {
-                    method: 'DELETE',
-                   body: JSON.stringify(productForm),
-                    headers: {
-                      'Content-Type': 'application/json',
-                    },
-                 });
-                 const responseData = await response.json();
-                 console.log(responseData);    
-                getErrorSpanEli.style.display = 'none'  
-                if (responseData.status==="si success"){
-                    Swal.fire('Se elimino el producto')  
+         
+         const responseData1 = await response1.json();         
+         if(responseData1.owner){
+            if ( getemail.getAttribute("class")==responseData1.owner){
+                if (id){
+            
+                    const productForm ={ 
+                        id            
+                    }          
+                    console.log(productForm)
+                    const response2 = await fetch(`/api/products/${id}`, {
+                        method: 'DELETE',
+                       body: JSON.stringify(productForm),
+                        headers: {
+                          'Content-Type': 'application/json',
+                        },
+                     });
+                     const responseData2 = await response2.json();
+                     console.log(responseData2);    
+                    getErrorSpanEli.style.display = 'none'  
+                    if (responseData2.status==="si success"){
+                        Swal.fire('Se elimino el producto')  
+                    }
+                    else{
+                        Swal.fire('el producto a eliminar no existia')  
+                    }
+                     
                 }
-                else{
-                    Swal.fire('el producto a eliminar no existia')  
-                }
-                 
+                else {
+                    
+                    getErrorSpanEli.style.display = 'block'
+                }   
+             }
+             else{
+                Swal.fire('no se puede eliminar ya que no fuiste quien creo el producto')   
+             }
+         }
+         else   
+            {
+                Swal.fire('el producto a eliminar no existia') 
             }
-            else {
-                
-                getErrorSpanEli.style.display = 'block'
-            }   
-         }
-         else{
-            Swal.fire('no se puede eliminar ya que no fuiste quien creo el producto')   
-         }
+        
     }
 })
 

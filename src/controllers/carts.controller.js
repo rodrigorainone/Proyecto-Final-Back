@@ -23,6 +23,7 @@ const agregarProductCart =  async (req,res,next)=>{
     try {
         const ProductId = await productService.getProductsByID(req.params.pid);
         
+        
      if (ProductId){
          const mensaje = await cartService.agregarProductCart((req.params.cid),({"product":req.params.pid,"quantity":req.body.quantity || 1}))             
          return res.send({status:"success",message:mensaje})  

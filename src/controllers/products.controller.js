@@ -67,7 +67,7 @@ const getProductsByID = async (req,res) =>{
     
     const aux = await productService.getProductsByID(req.params.pid);
    if (!aux){
-    return res.send("no existe el producto")
+    return res.send({status:"error"})
    }
 
     return res.send(aux)

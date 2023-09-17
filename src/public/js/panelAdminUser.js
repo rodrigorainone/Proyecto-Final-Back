@@ -16,6 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(responseData);
         if (responseData.status=="success"){
             Swal.fire('Se borraron usuarios inactivos ')
+            setTimeout(function() {
+                window.location.reload();
+             }, 2000);
         }
     })
 

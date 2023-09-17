@@ -162,23 +162,26 @@ const deleteProduct =  async (req,res)=>{
     console.log(req.session.user);    
     const idAux = req.params.pid;
     const borrado = await productService.deleteProduct(idAux)  
-    console.log(borrado)
+
     if (borrado){                             // si no existe producto a eliminar no envia mail 
         if (borrado.owner !== 'admin'){
-            const result = await transport.sendMail({
-                from:'Ecommerce Tuky <rodrigorainone@gmail.com>',
-                to:borrado.owner,
-                subject:'Producto eliminado',
-                html:`
-                <div>
-                    <h1>Hola, el producto que ah creado fue eliminado por el admin</h1>
-                    <p>Producto:${borrado.id}</p>
-                    
-                    
-    
-                </div>
-                `                            
-             })
+            if(req.session.user.name=='Admin'){
+                const result = await transport.sendMail({
+                    from:'Ecommerce Tuky <rodrigorainone@gmail.com>',
+                    to:borrado.owner,
+                    subject:'Producto eliminado',
+                    html:`
+                    <div>
+                        <h1>Hola, el producto que ah creado fue eliminado por el admin</h1>
+                        <p>Producto:${borrado.id}</p>
+                        
+                        
+        
+                    </div>
+                    `                            
+                 })
+            }
+            
         }
     }
     

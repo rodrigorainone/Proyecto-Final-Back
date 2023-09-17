@@ -1,6 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
     const getBotonsChangeRole = document.querySelectorAll('.changeRol');
     const getBotonesEliminar = document.querySelectorAll('.eliminar')
+    const getBotonEliminarTemporal = document.querySelector('.eliminarTemporal')
+
+    getBotonEliminarTemporal.addEventListener('click', async (e) =>{
+        e.preventDefault();  
+        const response = await fetch(`/api/users/`, {
+            method: 'DELETE',
+            body:'',
+            headers: {
+            'Content-Type': 'application/json',
+        },
+        });
+        const responseData = await response.json();
+        console.log(responseData);
+        if (responseData.status=="success"){
+            Swal.fire('Se borraron usuarios inactivos ')
+        }
+    })
+
   
 
     getBotonsChangeRole.forEach((element)=>{
